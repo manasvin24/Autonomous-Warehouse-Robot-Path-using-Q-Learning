@@ -1,0 +1,18 @@
+Warehouse Layout:
+
+The warehouse is divided into 12 labeled locations (A–L) connected by pathways.
+At any moment, each location may be assigned a priority rank from 1 (highest) to 12 (lowest), depending on factors such as customer urgency or product type.
+The robot starts at any given location and must navigate to the highest priority location.
+
+Key Features:
+
+The agent must learn to navigate from any start point to any destination using the shortest path possible.
+Optionally, the agent can stop at intermediary locations within the Top 3 priorities before reaching the top-priority location.
+The system can dynamically change priorities, and the agent should adapt its pathfinding strategy accordingly.
+
+Approach:
+
+Use Q-Learning to train the agent on possible actions (move up, down, left, right) within a grid-like environment.
+Reward the agent for reaching high-priority locations efficiently.
+Penalize the agent for unnecessary moves or collisions with walls.
+Implement optional logic for stopping by intermediary Top-3 priority points before final delivery.
